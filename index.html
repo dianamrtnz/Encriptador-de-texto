@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador de texto</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div>
+            <h1><img src="imagenes/Logo@2x.png" class="logo_alura">Encriptador de texto</h1>
+
+        </div>
+    </header>
+    <main>
+        <section class="Funciones">
+            <form onsubmit="return false;">
+                <label for="texto_entrada" id="ingresar">Ingrese su texto aquí</label>
+                <input type="text" id="texto_entrada" placeholder="¿Que desea encriptar?">
+            </form>
+            
+            <form class="botones">
+                <p>*Solo letras minusculas y sin acentos</p>
+                <button class="boton_encriptar" onclick="btnEncriptar(event)">Encriptar</button>
+                <button class="boton_desencriptar" onclick="btnDesencriptar(event)">Desencriptar</button>
+            </form>
+        </section>
+
+        <section class="ventana">
+            <h1><img src="imagenes/Muñeco.png" class="Muneco"></h1>
+            <div class="copitext">
+                <textarea cols="50" rows="5" id="Mensaje_encriptado" class="mensaje"></textarea>
+                <button id="boton_copiar" type="button" onclick="copiarTexto()">
+                    <i class="copiar"><img src="imagenes/icons8-copiar-24.png"></i>
+                </button>
+            </div>
+            <p>Acá encontrará el resultado del texto encriptado o desencriptado</p>
+        
+            <script>
+                function copiarTexto() {
+                    var mensajeEncriptado = document.getElementById("Mensaje_encriptado");
+                    mensajeEncriptado.select();
+                    document.execCommand("copy");
+                }
+            </script>
+        </section>
+    </main>
+
+    <footer>
+        <p>Proyecto realizado para cumplir el Challenge ONE Principiante en programación.</p>
+        <p>ONE Oracle Next Education - 2024</p>
+    </footer>
+
+    <script type="text/javascript" src="encriptador.js"></script>
+</body>
+</html>

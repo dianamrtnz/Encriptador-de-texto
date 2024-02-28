@@ -1,0 +1,169 @@
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    font-family: "Montserrat", sans-serif;
+    background-color: rgb(230, 248, 254);
+    transition: background-color 0.5s ease;
+}
+
+p{
+    font-weight: bold;
+    font-size: 15px;
+}
+
+#ingresar{
+    font-size: 35px;
+    font-weight: bolder;
+}
+
+header {
+    background-color: rgb(155, 189, 200);
+    padding: 4px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.logo_alura{
+    max-width: 20%; 
+    height: 45px; 
+}
+
+main {
+    margin-top: 100px;
+    margin-bottom: 150px;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    justify-content: space-between; 
+}
+
+.Funciones {
+    width: 30%;
+    margin-left: 200px;
+    margin-top: 80px;
+    font-size: medium;
+    text-align: center;
+}
+
+.Funciones label {
+    margin-bottom: 10px;
+    font-size: 25px;
+}
+
+.Funciones input {
+    margin-top: 25px;
+    width: 300px;
+    height: 40px;
+}
+
+
+.botones{
+    padding: 40px;
+    margin-top: 120px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color:rgb(95, 124, 133);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+
+  button:hover {
+    background-color: rgb(45, 60, 65);
+}
+
+.ventana {
+    box-sizing: content-box; 
+    display: inline-block;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 40px; 
+    background-color: aliceblue;
+    width: auto; 
+    margin: 0; 
+    margin-right: 200px;
+    margin-top: 25px;
+}
+
+.Muneco {
+    max-width: 100%; 
+    height: auto;
+    max-height: 250px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.mensaje{
+    border: none;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.copitext {
+    position: relative;
+    display: inline-block;
+}
+
+#boton_copiar {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+}
+
+footer {
+    background-color:  rgb(230, 248, 254);
+    padding: 20px 0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    text-align: center;
+    text-shadow: #BBBBBB;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px #cec7c7;
+}
+
+@media only screen and (max-width: 600px) {
+
+    header{
+        margin: 0;
+        padding: 8px 0;
+    }
+    
+    main {
+        flex-direction: column; /* Cambia a dirección de columna en pantallas pequeñas */
+    }
+
+    .Funciones {
+        width: 100%; /* O ajusta según sea necesario */
+        margin: 0;
+        margin-top: 35px; /* Elimina el margen izquierdo en pantallas pequeñas */
+    }
+
+    .botones{
+        padding: 40px;
+        margin-top: 40px;
+    }
+
+    .ventana {
+        width: 80%; /* O ajusta según sea necesario */
+        margin: 0; /* Elimina el margen derecho en pantallas pequeñas */
+    }
+
+    .ventana textarea {
+        width: 100%; /* Haz que el textarea ocupe el ancho completo de su contenedor */
+        box-sizing: border-box; /* Incluye el padding y el borde en el ancho total */
+    }
+}
